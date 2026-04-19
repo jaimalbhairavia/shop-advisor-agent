@@ -6,7 +6,12 @@ A ReAct (Reasoning + Acting) agent that helps you find the best products based o
 
 ## Demo
 
+Agent Demo
+
 ![Shop Advisor Agent Demo](assests/extended%20shop%20advisor.gif)
+
+Lang Smith trace for demo run
+![lang smith trace] runhttps://smith.langchain.com/public/c8e1a54a-d551-4ce1-9d0a-278ed4bcc308/r
 
 ---
 
