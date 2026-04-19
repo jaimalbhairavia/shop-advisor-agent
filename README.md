@@ -6,7 +6,7 @@ A ReAct (Reasoning + Acting) agent that helps you find the best products based o
 
 ## Demo
 
-![Shop Advisor Agent Demo](assests/Shop%20Advisor.gif)
+![Shop Advisor Agent Demo](assests/extended%20Shop%20Advisor.gif)
 
 ---
 
