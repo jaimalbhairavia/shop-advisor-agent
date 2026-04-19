@@ -1,0 +1,27 @@
+Input:
+What are you looking for? 
+ -> Best travel headphones under $200
+
+
+Output:
+
+Agent: Here are the best travel headphones under $200, based on value and travel-friendly features. All options are safe and within budget.
+
+Top recommendation
+- Anker Soundcore Life Q30 — $89 (Newegg)
+  - Why it’s great for travel: outstanding value, very long battery life, comfortable, and solid ANC at a budget price. Great if you want reliable ANC without breaking the bank.
+
+2nd place by value
+- JBL Tune 760NC — $119 (Walmart)
+  - Why it’s great for travel: decent ANC, lightweight and portable, comfortable for long sessions, and a strong price-to-feature ratio.
+
+3rd place by value
+- Bose QuietComfort 45 — $179 (Target)
+  - Why it’s great for travel: exceptionally comfortable fit and strong ANC, reliable performance, and solid overall sound quality; a premium experience without hitting the top-end prices.
+
+Honorable mention (optional)
+- Sony WH-1000XM5 — $189 (Best Buy)
+  - Why it’s noteworthy: best-in-class ANC and sound quality, excellent for travelers who want top performance while still staying under $200.
+
+Notes
+- No models were excluded for price or safety. If you’d like, I can tailor these to additional preferences (multipoint Bluetooth, folding design, transparency mode, wired fallback, or shorter/longer battery life).
