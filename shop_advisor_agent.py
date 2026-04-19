@@ -16,8 +16,7 @@ shop_advisor_agent = create_agent(
 
 
 if __name__ == "__main__":
-    user_query = "Best headphones under $200 for travel"
-    print(f"User: {user_query}\n")
+    user_query = input("What are you looking for? \n -> ")
 
     response = shop_advisor_agent.invoke(
         {
@@ -30,4 +29,4 @@ if __name__ == "__main__":
         }
     )
 
-    print("Agent:", response["messages"][-1].content)
+    print("\nAgent:", response["messages"][-1].content)

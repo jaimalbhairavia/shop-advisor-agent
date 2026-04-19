@@ -4,6 +4,12 @@ A ReAct (Reasoning + Acting) agent that helps you find the best products based o
 
 ---
 
+## Demo
+
+![Shop Advisor Agent Demo](assests/Shop%20Advisor.gif)
+
+---
+
 ## How It Works
 
 The agent follows a structured reasoning loop for every query:
