@@ -1,0 +1,47 @@
+{
+    "p1": {
+        "prices": [
+            {"vendor": "Amazon", "price": 199},
+            {"vendor": "BestBuy", "price": 189},
+            {"vendor": "Walmart", "price": 195}
+        ]
+    },
+    "p2": {
+        "prices": [
+            {"vendor": "Amazon", "price": 189},
+            {"vendor": "Target", "price": 179},
+            {"vendor": "BestBuy", "price": 185}
+        ]
+    },
+    "p3": {
+        "prices": [
+            {"vendor": "Apple Store", "price": 199},
+            {"vendor": "Amazon", "price": 194},
+            {"vendor": "BestBuy", "price": 189}
+        ]
+    },
+    "p4": {
+        "prices": [
+            {"vendor": "Amazon", "price": 129},
+            {"vendor": "Walmart", "price": 119}
+        ]
+    },
+    "p5": {
+        "prices": [
+            {"vendor": "Amazon", "price": 99},
+            {"vendor": "Newegg", "price": 89}
+        ]
+    },
+    "p7": {
+        "prices": [
+            {"vendor": "Amazon", "price": 99},
+            {"vendor": "BestBuy", "price": 95}
+        ]
+    },
+    "p8": {
+        "prices": [
+            {"vendor": "Amazon", "price": 89},
+            {"vendor": "Keychron", "price": 85}
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "blocked_categories": ["weapons", "illegal"],
+    "flagged_categories": ["health", "supplements"],
+    "min_rating_threshold": 3.5,
+    "banned_brands": ["Unknown"]
+}

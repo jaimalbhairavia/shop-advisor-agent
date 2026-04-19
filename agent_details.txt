@@ -1,0 +1,16 @@
+The shop advisor agent (currently supports headphones - bounded by data)is a ReAct agent with the ability to call tools. 
+Its a simple agent with 3 tools - Product search, Price comparision, safety checker
+
+ Flow
+ User query: "Best headphones under $200 for travel"
+
+ Agent thinks:
+ Category: headphones
+ Constraints: Price < 200
+ Use case: Travel
+
+
+Agent calls the product search tool to identify the matching products.
+Product list is then sent to the LLM for further filtering based on price and other attributes.
+The product then goes through the safety rules for further filtering
+Then the product ids of the shortlisted product sent to the price compare tool to find where to buy the product

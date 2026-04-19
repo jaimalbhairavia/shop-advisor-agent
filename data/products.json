@@ -1,0 +1,102 @@
+[
+    {
+        "id": "p1",
+        "name": "Sony WH-1000XM5",
+        "category": "headphones",
+        "price": 199,
+        "rating": 4.7,
+        "review_count": 12000,
+        "features": ["noise cancelling", "bluetooth", "30h battery"],
+        "brand": "Sony"
+    },
+    {
+        "id": "p2",
+        "name": "Bose QuietComfort 45",
+        "category": "headphones",
+        "price": 189,
+        "rating": 4.6,
+        "review_count": 9800,
+        "features": ["noise cancelling", "comfortable", "bluetooth"],
+        "brand": "Bose"
+    },
+    {
+        "id": "p3",
+        "name": "Apple AirPods Pro (2nd Gen)",
+        "category": "earbuds",
+        "price": 199,
+        "rating": 4.5,
+        "review_count": 15000,
+        "features": ["noise cancelling", "spatial audio", "ios integration"],
+        "brand": "Apple"
+    },
+    {
+        "id": "p4",
+        "name": "JBL Tune 760NC",
+        "category": "headphones",
+        "price": 129,
+        "rating": 4.3,
+        "review_count": 4200,
+        "features": ["noise cancelling", "lightweight"],
+        "brand": "JBL"
+    },
+    {
+        "id": "p5",
+        "name": "Anker Soundcore Life Q30",
+        "category": "headphones",
+        "price": 99,
+        "rating": 4.4,
+        "review_count": 8700,
+        "features": ["noise cancelling", "budget", "long battery"],
+        "brand": "Anker"
+    },
+    {
+        "id": "p6",
+        "name": "Generic Herbal Supplement X",
+        "category": "health",
+        "price": 49,
+        "rating": 3.2,
+        "review_count": 120,
+        "features": ["weight loss", "natural"],
+        "brand": "Unknown"
+    },
+    {
+        "id": "p7",
+        "name": "Logitech MX Master 3S",
+        "category": "mouse",
+        "price": 99,
+        "rating": 4.8,
+        "review_count": 11000,
+        "features": ["ergonomic", "bluetooth", "multi-device"],
+        "brand": "Logitech"
+    },
+    {
+        "id": "p8",
+        "name": "Keychron K6 Mechanical Keyboard",
+        "category": "keyboard",
+        "price": 89,
+        "rating": 4.5,
+        "review_count": 5300,
+        "features": ["mechanical", "wireless", "rgb"],
+        "brand": "Keychron"
+    },
+    {
+        "id": "p9",
+        "name": "Keychron K7 Mechanical Keyboard",
+        "category": "keyboard",
+        "price": 99,
+        "rating": 4.5,
+        "review_count": 5300,
+        "features": ["mechanical", "wireless", "rgb"],
+        "brand": "Keychron"
+    },
+    {
+        "id": "p10",
+        "name": "Bose QuietComfort 25",
+        "category": "headphones",
+        "price": 159,
+        "rating": 4.6,
+        "review_count": 9800,
+        "features": ["noise cancelling", "comfortable", "bluetooth"],
+        "brand": "Bose"
+    }
+]
