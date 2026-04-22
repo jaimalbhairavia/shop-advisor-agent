@@ -56,6 +56,18 @@ shop-advisor-agent/
 │   ├── products.json       # Product catalog
 │   ├── price.json          # Vendor pricing (Amazon, BestBuy, Walmart…)
 │   └── safety_rules.json   # Blocked categories, banned brands, rating floor
+├── evals/
+│   ├── eval.py             # Full eval suite (LangSmith)
+│   ├── eval_small.py       # Lightweight 5-case smoke test
+│   └── eval_datasets/
+│       ├── dataset.py      # Full dataset — 29 cases across 8 categories
+│       └── eval_dataset_small.py  # 5-case subset for fast iteration
+├── scorer/
+│   ├── suite_scorer.py     # Deterministic evaluators (run on every case)
+│   └── case_scorer.py      # Deterministic evaluators (category-specific)
+├── judges/
+│   ├── suite_judge.py      # LLM-as-judge evaluators (run on every case)
+│   └── case_judge.py       # LLM-as-judge evaluators (category-specific)
 └── runbook.py              # Dev sandbox for testing tool logic
 ```
 
@@ -91,6 +103,65 @@ pip install -r requirements.txt
 # Run the agent
 python shop_advisor_agent.py
 ```
+
+---
+
+## Evals
+
+The eval suite runs every agent response through a combination of deterministic scorers and LLM-as-judge evaluators, integrated with LangSmith.
+
+### Evaluators
+
+**Deterministic scorers** (`scorer/`) — fast, rule-based checks:
+
+| Evaluator | Scope | What it checks |
+|-----------|-------|----------------|
+| `has_output` | Every case | Agent returned a non-empty response |
+| `correct_product_category` | Cases with expected categories | Response mentions a product from the expected category |
+| `price_within_budget` | Cases with a budget | All prices in the response are within the stated budget |
+| `no_literal_passthrough` | Passive description cases | Agent translated indirect descriptions into real product terms |
+| `safety_blocked` | Safety blocking cases | Agent refused blocked/out-of-scope requests |
+| `no_banned_brands` | Safety blocking cases | Agent did not recommend any banned brands |
+
+**LLM-as-judge** (`judges/`) — quality checks that code cannot catch:
+
+| Evaluator | Scope | What it checks |
+|-----------|-------|----------------|
+| `response_is_helpful` | Every case | Response directly addresses the user's query, not generically |
+| `correctness` | Every case | Overall correctness — right products, right refusals, no hallucinations |
+| `understood_user_intent` | Cases with expected categories | Agent correctly interpreted indirect or passive queries |
+| `helpful_tone` | Cases expecting results | Response is confident, friendly, and actionable |
+
+### Test Dataset
+
+29 cases across 8 categories in `evals/eval_datasets/dataset.py`:
+
+| Category | Cases | Tests |
+|----------|-------|-------|
+| `happy_path` | 5 | Standard product queries with budget |
+| `budget_filtering` | 4 | Exact budget limits, no-results when too tight |
+| `safety_blocking` | 4 | Blocked categories, banned brands, rating floor |
+| `safety_flagging` | 2 | Flagged categories surfaced to LLM |
+| `multi_constraint` | 4 | Brand inclusion/exclusion + budget combined |
+| `passive_description` | 5 | Indirect queries that require intent mapping |
+| `no_results` | 3 | Queries outside catalog scope |
+| `out_of_scope` | 3 | Illegal or out-of-domain requests |
+
+### Running Evals
+
+```bash
+# Quick smoke test — 5 cases, 2 evaluators
+python -m evals.eval_small
+
+# Full suite — 29 cases, 5 evaluators
+python -m evals.eval
+```
+
+Results stream to your LangSmith dashboard in real time.
+
+### Eval Results
+
+![Eval Results](assests/evaluation.png)
 
 ---
 

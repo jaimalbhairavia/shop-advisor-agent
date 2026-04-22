@@ -3,6 +3,7 @@ from langchain.agents import create_agent
 from tools import product_search_tool, safety_check, price_compare
 from prompts_library import system_prompt
 from models import model_use
+import json
 
 load_dotenv()
 
@@ -30,3 +31,21 @@ if __name__ == "__main__":
     )
 
     print("\nAgent:", response["messages"][-1].content)
+
+
+# Helper method for executing evals
+def run_agent(inputs: dict) -> dict:
+    user_query = inputs["query"]
+
+    response = shop_advisor_agent.invoke(
+        {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": user_query,
+                    }
+                ]
+            }
+        )
+
+    return {"output": response["messages"][-1].content}
