@@ -10,6 +10,11 @@ Agent Demo
 
 ![Shop Advisor Agent Demo](assests/extended%20shop%20advisor.gif)
 
+## Eval Results
+
+![Eval Results](assests/evaluation.png)
+
+
 [Lang Smith trace for demo run](https://smith.langchain.com/public/c8e1a54a-d551-4ce1-9d0a-278ed4bcc308/r)
 
 ---
@@ -159,9 +164,6 @@ python -m evals.eval
 
 Results stream to your LangSmith dashboard in real time.
 
-### Eval Results
-
-![Eval Results](assests/evaluation.png)
 
 ---
 
